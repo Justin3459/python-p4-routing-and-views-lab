@@ -17,6 +17,30 @@ def print_string(parameter):
 
 @app.route('/count/<int:parameter>')
 def count(parameter):
+    count= ""
+    for number in range(parameter):
+        print (f'{number}')
+        count = (count + str(number) + "\n")
+    return count
+    pass
+
+@app.route("/math/<int:num1>/<string:operation>/<int:num2>")
+def math(num1,operation,num2):
+    result = ""
+    if operation == "+":
+        result = num1 + num2
+    elif operation == "-":
+        result = num1 - num2
+    elif operation == "*":
+        result = num1 * num2
+    elif operation == "div":
+        result = num1 / num2
+    else:
+        result = num1 % num2
+    return str(result)
+
+    #result = eval(f'{num1} {operation} {num2}')
+    #return result
     pass
 
 if __name__ == '__main__':
