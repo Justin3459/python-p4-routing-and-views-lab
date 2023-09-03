@@ -6,11 +6,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return '<h1> Python Operations with Flask Routing and Views</h1>'
+    return '<h1>Python Operations with Flask Routing and Views</h1>'
     pass
 
 @app.route('/print/<string:parameter>')
-def print_string():
+def print_string(parameter):
+    print (parameter)
+    return f'{parameter}'
     pass
 
 
