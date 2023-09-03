@@ -8,5 +8,11 @@ app = Flask(__name__)
 def index():
     return '<h1> Python Operations with Flask Routing and Views</h1>'
     pass
+
+@app.route('/print/<string:parameter>')
+def print_string():
+    pass
+
+
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
