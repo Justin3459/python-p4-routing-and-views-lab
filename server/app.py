@@ -15,6 +15,9 @@ def print_string(parameter):
     return f'{parameter}'
     pass
 
+@app.route('/count/<int:parameter>')
+def count(parameter):
+    pass
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
